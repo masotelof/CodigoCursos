@@ -1,0 +1,10 @@
+{
+  "categories": [
+    {
+      "name": "Programación",
+      "main_page": "pages/programacion.html",
+      "image": "imgs/imagen_ejemplo.png",
+      "pages": ["pages/programacion.html"]
+    }
+  ]
+}
