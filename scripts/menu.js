@@ -1,6 +1,6 @@
 async function cargarMenu() {
   try {
-    const res = await fetch('/config.json');
+    const res = await fetch('config.json');
     const data = await res.json();
     const menu = document.getElementById('menu');
     menu.innerHTML = "";
@@ -10,13 +10,13 @@ async function cargarMenu() {
       div.classList.add('categoria');
 
       const link = document.createElement('a');
-      link.href = "/" + cat.paginaPrincipal;
+      link.href = cat.paginaPrincipal;
       link.style.display = "flex";
       link.style.alignItems = "center";
       link.style.gap = "0.5rem";
 
       const img = document.createElement('img');
-      img.src = "/" + cat.imagen;
+      img.src = cat.imagen;
       img.alt = cat.nombre;
       img.classList.add('icono');
 
