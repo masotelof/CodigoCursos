@@ -1,16 +1,18 @@
 {
   "categorias": [
     {
-      "nombre": "Python",
-      "imagen": "imgs/python.png",
-      "pagina_principal": "pages/python.html",
-      "paginas": ["pages/python.html"]
-    },
-    {
-      "nombre": "Lenguaje C",
+      "nombre": "Programación en C",
       "imagen": "imgs/c.png",
-      "pagina_principal": "pages/c.html",
-      "paginas": ["pages/c.html"]
+      "paginaPrincipal": "pages/c/index.html",
+      "subcategorias": [
+        {
+          "nombre": "Estructuras de control",
+          "paginas": [
+            { "titulo": "Condicionales", "ruta": "pages/c/condicionales.html" },
+            { "titulo": "Bucles", "ruta": "pages/c/bucles.html" }
+          ]
+        }
+      ]
     }
   ]
 }
