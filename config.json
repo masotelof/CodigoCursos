@@ -1,10 +1,16 @@
 {
-  "categories": [
+  "categorias": [
     {
-      "name": "Programación",
-      "main_page": "pages/programacion.html",
-      "image": "imgs/imagen_ejemplo.png",
-      "pages": ["pages/programacion.html"]
+      "nombre": "Python",
+      "imagen": "imgs/python.png",
+      "pagina_principal": "pages/python.html",
+      "paginas": ["pages/python.html"]
+    },
+    {
+      "nombre": "Lenguaje C",
+      "imagen": "imgs/c.png",
+      "pagina_principal": "pages/c.html",
+      "paginas": ["pages/c.html"]
     }
   ]
 }

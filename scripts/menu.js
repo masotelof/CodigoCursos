@@ -1,17 +1,19 @@
-fetch('../config.json')
-  .then(response => response.json())
-  .then(config => {
-    const menuDiv = document.getElementById('menu');
-    let menuHtml = '<h2>Menú</h2><ul>';
-    config.categories.forEach(category => {
-      menuHtml += `
-        <li>
-          <a href="../${category.main_page}">
-            <img src="../${category.image}" alt="${category.name}" class="category-img">
-            ${category.name}
-          </a>
-        </li>`;
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("config.json")
+    .then(res => res.json())
+    .then(data => {
+      const menu = document.getElementById("menu");
+      menu.innerHTML = '<h2>Categorías</h2><ul>';
+      data.categorias.forEach(cat => {
+        menu.innerHTML += `
+          <li>
+            <a href="\${cat.pagina_principal}">
+              <img src="\${cat.imagen}" alt="\${cat.nombre}" style="width:20px;height:20px;">
+              \${cat.nombre}
+            </a>
+          </li>
+        `;
+      });
+      menu.innerHTML += '</ul>';
     });
-    menuHtml += '</ul>';
-    menuDiv.innerHTML = menuHtml;
-  });
+});
