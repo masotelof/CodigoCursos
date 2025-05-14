@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TITULO</title>
+    <link rel="stylesheet" href="../../styles/dark.css">
+    <link rel="stylesheet" href="../../libs/highlightjs/styles/github-dark.min.css">
+</head>
+<body>
+<div class="container">
+    <aside id="menu"></aside>
+    <main id="contenido">
+        <h1>La computadora y la solución de Problemas</h1>
+        Soy un detective privado, por lo que me usan para ver y oír asuntos peculiares; pero, cuando una joven y curvilínea científica vestida solamente con un abrigo de visón me enseño una larga caja en forma de ataúd y me pidió que encontrara la maquinaria valuada en millones que solía estar allí, yo tuve que sonreír. «Nena, eso puede ser una computadora para ti -dije-, más para mí eso es exactamente un féretro.»
+
+        Raymond Banks, The Computer Kill (Toronto: Popular library, 1961)
+
+        <p>En la primera exposición a las computadoras es muy fácil dejarse llevar por los detalles tecnológicos. La tecnología es fascinante, pero aun cuando pueda ser de interés para muchos, no es conveniente profundizar en ella en este momento, porque puede ocultar algunos otros conceptos importantes. Por esta razón se adoptará en un comienzo una visión muy simplificada de la computadora. A medida que el empleo de ellas sea más extenso llegarán a ser menos impresionantes y la imagen que se tenga de ellas será más completa.</p>
+
+        <p>Se presenta una visión muy breve de la estructura de una computadora típica, pasándose en seguida al uso de esta. Por último, se enfocará el punto principal de este libro -resolver problemas usando la computadora-. Se introducen algunos conceptos claves necesarios para resolver problemas con la computadora y se resuelven algunos problemas simples. El primero de ellos puede parecer simple, pero una vez que se lo domine, la técnica aprendida se extiende fácilmente y será de gran ayuda a medida que la complejidad de los problemas aumenta.</p>
+
+        <h2>Sistemas de Cómputo: Breve Introducción</h2>
+        <p>Los sistemas modernos de computación consisten en una gran conjunción de elementos de circuitos (hardware) y de programación (software) que han sido diseñados para proporcionar a la computación un ambiente productivo y hasta cierta medida agradable. Los términos hardware y software pueden no ser conocidos por todos. Por Hardware se entiende la totalidad en los equipos mismos de computación, y por Software, todo el conjunto de programas de apoyo que han escrito para que el usuario del sistema los use en alguna forma. En esta sección se darán ejemplos de ambos términos.</p>
+
+        <p>Es muy difícil hablar acerca de los aspectos de computación sin mencionar tanto el hardware como el software relativos a ella. Por esta razón, se utiliza con frecuencia el término Sistema de Cómputo para señalar lo que el usuario emplea, en lugar del término computadora, que tiene un marcado acento de hardware. Para la mayoría de los usuarios de los sistemas de cómputo los elementos de software son de hecho mucho más visibles. No necesitan saber demasiado del hardware que se requiere para que sus programas sean procesados.</p>
+
+        <p>En los primeros años de la computación, los usuarios del sistema debían interactuar más estrechamente con el hardware real que lo que es hoy necesario. Ahora la tendencia es alejarse de esta interacción directa del usuario con el hardware, debido principalmente a que las reacciones humanas son considerablemente más lentas que las velocidades de operación de las máquinas, lo que introduce períodos de tiempo ocioso que son inaceptables. Muchas funciones que deberían de realizar los usuarios mismos se manejan ahora por software conocido como sistema operativo. Este es responsable básicamente del procesamiento de los programas por el sistema de cómputo; asegura, por ejemplo, que los recursos apropiados de hardware del sistema estén disponibles a medida que se les requiera, que los recursos de software sean proporcionados cuando se les necesite y, en la mayor parte de los sistemas, que el usuario pague el uso de los recursos del sistema en proporción al uso que hizo de ellos. En resumen, el sistema operativo crea un ambiente en el cual los usuarios pueden preparar programas y ejecutarlos sin tener que entrar en los detalles del hardware del sistema.</p>
+
+        <p>Para satisfacer el dramático crecimiento de la demanda de medios de computación, se ha llegado a desarrollar una forma de operación, conocida como multiprogramación, en la cual varios usuarios emplean el sistema de forma simultánea. La función del sistema operativo consiste en este caso en coordinar la forma en que el sistema es compartido (tanto en hardware como en software) de tal forma que pueda proporcionar el tipo de servicio que cada usuario requiera y hacer mínima la interferencia que puede presentarse a la hora de ejecutar los programas. El objetivo global del sistema de cómputo es el guiar todas las decisiones que debe tomar el sistema operativo.</p>
+
+        <p>Los sistemas de cómputo pueden dividirse en cuatro categorías, según el tipo de servicio que prestan. La división es muy general, porque muchos sistemas proporcionan más de un tipo de servicio, pero en aras de la simplicidad se tratarán individualmente.</p>
+
+        <p>Los dos sistemas más comunes de procesamiento son el sistema en lote (batch) y el sistema interactivo de tiempo compartido. Tanto los métodos de acceso del usuario como sus necesidades son diferentes en ambos casos. En el sistema de procesamiento por lotes, los usuarios normalmente proporcionan sus programas (o tareas) en forma de un atado de tarjetas perforadas y regresan posteriormente para recoger sus resultados (normalmente en formas impresas). A medida que las tareas van llegando, el sistema operativo las junta en lotes, que se guardan en algún tipo de memoria externa, se seleccionan tareas para ser ejecutadas en la medida que los recursos de cómputo están disponibles y se van sustituyendo tareas completas de entre las que esperan turno. El objetivo fundamental de estos sistemas es el paso rápido, o sea, la mayor cantidad posible de uso del sistema por unidad de tiempo, con lo cual se espera que los programas de los usuarios se sucedan rápidamente.</p>
+
+        <p>En los sistemas interactivos de tiempo compartido, los usuarios introducen sus tareas al sistema operativo desde terminales individuales, las cuales son similares en apariencia a las máquinas de escribir, pudiendo o no tener una pantalla de tubo de rayos catódicos (CRT). La operación es interactiva en el sentido de que, durante toda la sesión con la terminal, el usuario se encuentra continuamente enfrascado en un diálogo con el sistema operativo, en el cual la máquina y el usuario cooperan para el procesamiento de la tarea. Como al usuario le parece obtener una respuesta inmediata a sus comandos, tiene la ilusión de que el sistema de cómputo le proporciona una atención única y completa. En realidad, puede haber muchos otros usuarios operando simultáneamente y de forma similar, como se muestra en la figura Usuarios en un Sistema de Tiempo de Cómputo. El sistema operativo crea esta ilusión al dar a cada uno de los usuarios un pequeño tiempo de atención por turnos, en la forma de tiempo útil de CPU. Este tiempo puede ser pequeño para el usuario, pero lo suficientemente grande en términos del sistema de cómputo como para que pueda ejecutar muchas instrucciones. Por ejemplo, en medio segundo la mayor parte de los sistemas de cómputo pueden efectuar cientos de instrucciones. El principal objetivo de esta clase de sistemas es proporcionar al usuario una respuesta rápida. Los estudios han demostrado que, a pesar de que se hasta un tiempo de cómputo total mayor, los usuarios de los sistemas interactivos pueden, con frecuencia, resolver sus problemas en un periodo menor de tiempo que los usuarios de los sistemas de lote. Las terminales que están conectadas a los sistemas interactivos pueden situarse geográficamente distantes del punto donde se encuentra la computadora transmitiendo datos por medio de enlaces de comunicaciones como las líneas normales de teléfonos. Las comunicaciones por microondas o a través de satélites se emplean cuando las distancias son considerables.</p>
+
+
+        <h2>Usuarios en un Sistema de Tiempo de Cómputo</h2>
+        <p>Otras dos formas de operación de los sistemas de cómputo han ido ganando aceptación recientemente. Una de ellas es el sistema de negocios en línea, que tiene una gran similitud con los sistemas interactivos de tiempo compartido, en los cuales el usuario tiene acceso por medio de terminales. Sin embargo, ahora los objetivos son diferentes: mientras que los usuarios de tiempo compartido son programadores, los usuarios de los sistemas en línea no lo son; en vez de ello, simplemente proporcionan datos a un programa que esta ejecutándose continuamente. Los ejemplos más conocidos son las reservaciones de aerolíneas y la banca. En estos últimos, los usuarios proporcionan información como el nombre del cliente, fecha, cantidad depositada y reciben a cambio un comprobante impreso de la operación realizada, en el que aparece la cuenta actualizada del cliente. En los primeros, los usuarios dependen de oficinas de reservación que proporcionan servicios a los viajeros, como informaciones sobre itinerarios reservaciones de vuelo y similares. Los sistemas de negocios en línea han ido transformándose en populares herramientas de negocios para proporcionar rápidamente, información y servicios.</p>
+
+        <p>El último sistema de cómputo digno de mención es la red de computadoras que consiste en varios sistemas de cómputo interconectados los cuales pueden estar muy separados geográficamente. Los usuarios de cualquiera de la red pueden tener trabajos en proceso en cualquier de los otros sistemas y, por lo tanto, sacar ventaja de algunas características especiales que pudiera haber en otras instalaciones. Un ejemplo de red de computadoras es ARPANET, que reúne a muchos centros de cómputo de Estados Unidos. Aunque se encuentra todavía en la etapa experimental, las redes de computadoras están llamadas a jugar un importante papel en la computación del futuro.</p>
+
+        <p>Aunque los sistemas de cómputo distintos pueden realizar operaciones radicalmente diferentes y tener también una apariencia muy distinta, sus organizaciones de hardware son, de hecho, muy similares. A continuación se analizarán los componentes básicos de hardware de un sistema de cómputo típico.</p>
+
+        <h2>Componentes de una Computadora Típica</h2>
+        <p>Todas las computadoras, desde el más pequeño microsistema hasta los más complejos, están compuestas de cuatro componentes básicos. Éstos son unidades de almacenamiento, la unidad aritmética/lógica, la unidad de entrada/salida y la unidad de control. Se analizarán con mayor detalle a continuación.</p>
+
+        <p>En primer lugar se analizará el elemento de almacenamiento. Cada computadora tiene una cantidad determinada de almacenamiento interno, denominado con frecuencia memoria principal, además del almacenamiento externo consistente en cintas y discos magnéticos. Las dos formas de almacenamiento difieren en sus características y propósitos. Los programas que están en ejecución, así como los datos necesarios para ello, deben residir en la memoria principal. Esta es más costosa y, en la mayor parte de los sistemas es un recurso un tanto escaso. La información que no se requiere de inmediato se relega normalmente a los dispositivos de almacenamiento externo, donde la capacidad de almacenamiento puede ser casi ilimitada, pero donde el tiempo de recuperación de la misma suele ser considerablemente más grande. Al mismo tiempo, el costo del almacenamiento externo es comparativamente más bajo, por lo que la información puede ser almacenada allí por largos períodos.</p>
+
+        <p>La memoria principal de la computadora se divide en unidades pequeñas e iguales denominadas palabras, que tienen una única dirección. Cada una de estas palabras de la memoria es capaz de almacenar una unidad de información, como, por ejemplo, los resultados numéricos de la computación. El tamaño de la palabra es un parámetro de diseño de la computadora, y determina, digamos, el número más grande y el más pequeño que pueden ser almacenados. Puede imaginarse, por ejemplo, una máquina diseñada con un tamaño de palabra capaz de almacenar hasta 8 dígitos decimales, otra capaz de almacenar hasta 16 digitos binarios, etc. Las consecuencias de esta decisión se analizarán más adelante con mayor detalle.</p>
+
+        <p>Tal como se mencionó, cada palabra de la memoria principal tiene una dirección fija, la figura Representación de la memoria de una Computadora muestra cómo puede representarse esta situación en una forma similar a la disposición de los apartados de correos. Las direcciones de memoria sirven para identificar cada palabra individualmente, de tal manera que la información contenida en ella puede leerse, o si se desea, almacenarse allí. En esta forma, la dirección cumple la misma función que el número del apartado de correos. Con el propósito de ejemplificar, las direcciones correspondientes a esta sección de la memoria se muestran arriba de cada palabra, a pesar de que en la práctica no necesitan representarse físicamente. También se ha adoptado una presentación bidimensional de «fila Y columna», cuando de hecho las memorias se consideran como una hilera lineal de palabras.</p>
+
+
+        <h2>Representación de la memoria de una Computadora</h2>
+        <p>Las memorias de las computadoras pueden fabricarse de muchas formas; en las máquinas, primitivas, por ejemplo, los circuitos biestables flip flops de tubos de vacío se utilizaron para representar la información almacenada. Posteriormente, la tecnología de los núcleos magnéticos prevaleció. Aproximadamente desde el decenio 1960-1970, las memorias de semiconductores han ido popularizándose. Estos avances tecnológicos han mejorado la confiabilidad de las memorias y han reducido el tiempo requerido para tener acceso a la información (lo que aumenta la velocidad de operación de la computadora), mientras que al mismo tiempo han reducido en gran medida su tamaño físico. Para imaginar cómo se almacena realmente la información, imagínese que la memoria se compone de una serie de apagadores de dos posiciones. Cuando se encuentra uno de ellos sen la posición de «encendido», representa convencionalmente el digito binario 1; cuando se encuentra en la posición «apagado», representará el dígito binario 0. En las figuras se indicaran los apagadores que se encuentran en la posición «encendido» mediante un rectángulo oscurecido y con un rectángulo blanco los que se encuentren en la posición de «apagado».</p>
+
+        <p>La representación de la información es algo más complicada de lo que se ha dicho. La complicación proviene del hecho de que se desea representar información de diversa naturaleza; por ejemplo, se necesitará tanto información numérica como no numérica. La representación de esta última (caracteres) se efectúa mediante una codificación, con la cual ciertas disposiciones de bits se consideran por convención que representan determinados caracteres. Los códigos mas populares de la industria de la computación son: el código de 8 bits EBCDIC (Extended Binary Coded Decimal Interchange Code) Y el de 7 bits ASCII (American Standard Code for Information Interchange).</p>
+
+        <p>Respecto de la información numérica, aún quedan algunas cuestiones que deben aclararse; por ejemplo, el asunto de los números negativos y la distinción entre enteros y reales. Los signos se manejan normalmente mediante un bit de la palabra (normalmente el bit de la extrema izquierda) que se utiliza como el bit de signo, donde 0 representa un numero positivo y 1 los negativos. Si el tamaño de la palabra es de m bits, esto deja m-i para la magnitud del número almacenado. La representación de los números reales es considerablemente más complicada.</p>
+
+        <p>El segundo componente básico de cualquier sistema de cómputo es la Unida Aritmética y Lógica (ALU), donde se efectúan todas las operaciones. Entre ellas se incluyen operaciones aritméticas como la suma, resta, multiplicación y división, y las operaciones lógicas como la comparación de valores para ver cuál de ellos es mayor. Cuando se efectúan cálculos complejos, es necesario que la información se mueva frecuentemente hacia y desde la memoria principal, durante el desarrollo de la computación.</p>
+
+        <p>Todo sistema de cómputo necesita establecer contacto con el mundo exterior por medio de dispositivos de entrada y salida. Los dispositivos de entrada proporcionan los medios por los cuales los datos (y , como se verá más adelante, las instrucciones) son transmitidos a la computadora. Los positivos de salida son necesarios para mostrar los resultados. Existe una gran variedad de dispositivos de entrada y salida, entre los más conocidos se encuentran los lectores de tarjetas perforadas, teletipos y pantallas de tubos de rayos catódicos (CRT) con teclado. Entre los dispositivos de salida más conocidos están los impresores, perforadores de tarjetas y, de nuevo, los teletipos y pantallas de tubos de rayos catódicos, los cuales sirven tanto como dispositivos de entrada como de salida.</p>
+
+        <p>El componente básico final del sistema de cómputo y con mucho el más importante, debido a que controla la operación de los demás componentes, es conocido con el nombre de Unidad de Control. Operando con las instrucciones de control que proporciona el programador y que residen en la memoria principal, la unidad de control hace que los datos se lean desde el dispositivo de entrada, se almacenen en la memoria, sean llevados a la unidad aritmética y lógica cuando se les necesite para las operaciones de cálculo, se almacenen y se recuperen datos y valores intermedios en la memoria principal, y finalmente se presenten los resultados en el dispositivo de salida. La combinación de la unidad de control y de la unidad aritmética y lógica se conoce comúnmente como unidad central de proceso (CPU). Los componentes de una computadora típica aparecen esquematizados en la siguiente figura.</p>
+
+
+        <p>Los componentes de un Sistema de Cómputo típico (las líneas de trazos indican señales de control: las líneas continuas flujos de datos)
+        Lenguaje Máquina y Programas.</p>
+
+
+        <p>De la presentación anterior puede obtenerse alguna idea de lo que es exactamente un programa de computadora. Un programa es simplemente una secuencia de instrucciones que orienta a la CPU en el desarrollo de los cálculos. Por ultimo, este programa debe expresarse de forma que pueda ser entendido por la CPU. Aunque esto es rara vez de la incumbencia del programador, una breve descripción del lenguaje de máquina y de los programas escritos con él proporcionarán una visión general de la operación de una CPU.</p>
+
+        <p>Una CPU sólo puede entender instrucciones que estén expresadas en términos de su lenguaje máquina. Para ilustrar el concepto de programas escritos en lenguaje de máquina y de la operación de la CPU al ejecutar tal programa, considérese una CPU con un lenguaje de máquina muy primitivo. Cualquier lenguaje es solamente un conjunto de reglas para especificar la forma en que las cosas deben expresarse a fin de que sean entendidas. Para este ejemplo e lenguaje particular, se supondrá que cada instrucción tiene 8 bits y que consta de dos partes: de un código de operación de 3 bits que especifica la operación que debe realizarse y de un operando de 5 bits que proporciona la dirección del dato con el dual se va a realizar la operación codificada. También se supone la existencia de un acumulador en la unidad aritmética y lógica, en el cual se realizarán las operaciones aritméticas. En la siguiente tabla se definen un conjunto de instrucciones de la CPU del ejemplo; esto quiere decir que esta CPU tiene circuitos especialmente diseñados para ejecutar directamente esas instrucciones en particular.</p>
+
+        Dirección de la Instrucción	Código de Operación	Operando
+        00000	001	01010
+        00001	010	01100
+        00010	001	01110
+        00011	011	01011
+        00100	010	01110
+        00101	001	01100
+        00110	100	01101
+        00111	010	01100
+        01000	110	00010
+        01001	111	00000
+        Conjunto de Instrucciones del CPU de ejemplo
+
+
+        <p>Supóngase que el programa que acabamos de mostrar ha estado cargado en las diez primeras palabras de la memoria. Se muestran separadamente el código de la operación y el operando para facilitar la comprensión del ejemplo, aunque en la memoria la instrucción completa es una hilera de 8 bits (tal como se muestra, por ejemplo, en la figura Contenidos de la memoria para un programa de ejemplo y los datos asociados).</p>
+
+        <p>Además de las que se muestran, otras palabras de la memoria han sido cargadas también con valores. La distribución completa de la memoria, cuando la operación va a comenzar, se muestra en la figura Contenidos de la memoria para un programa de ejemplo y los datos asociados. También se supone que la ejecución comienza en la palabra 00000 con la instrucción 00101010 y, a menos que se especifique otra cosa, las instrucciones se van tomando en el orden que aparecen. De la tabla de Conjunto de Instrucciones se sabe que la primera instrucción es de carga (load), cuyo código de operación es 001, y que se pide a la CPU copiar el valor de la palabra 01010 en el acumulador; por tanto, después de esta instrucción, el valor 00000011 (equivalente a 3 en base 10) se encontrará en el acumulador. Esto quiere decir que la operación «copia» no afecta el valor contenido en la palabra 01010; sin embargo, el anterior contenido del acumulador (si es que lo había) se ha perdido. La ejecución continua con la siguiente instrucción de la secuencia. o sea, con la contenida en la palabra 00001.</p>
+
+
+        Contenidos de la memoria para un programa de ejemplo y los datos asociados
+        Código de Operación	Significado
+        001	load (carga): cópiese el valor de la palabra direccionada en el acumulador.
+        010	Store (almacena): cópiese el valor del acumulador en la palabra direccionada.
+        011	Add (suma): reemplácese el valor actual del acumulador por la suma de su valor actual y el valor de la palabra direccionada.
+        100	Substraer (resta): reemplácese el valor actual del acumulador por el resultado que se obtiene al restar, del valor actual, el valor de la palabra direccionada.
+        101	Branch (ramificación incondicional): pásese a ejecutar la instrucción contenida en la palabra direccionada.
+        110	Branch if not O (ramificación condicional): pásese a ejecutar la instrucción contenida en la palabra direccionada solamente si el valor actual del acumulador es diferente de O.
+        111	Halt (alto): termina la ejecución.
+        Conjunto de Instrucciones
+        La siguiente instrucción es almacenar (store), cuyo código de operación es 010, la que indica a la CPU que debe copiar el valor contenido en el acumulador a la palabra 01100, reemplazando la que allí estaba por el valor 00000011.
+
+        <p>La tercera instrucción es otra carga, por lo que el contenido de la palabra 01110 se copia en el acumulador, tratándose del valor 00000000.</p>
+
+        <p>La cuarta instrucción es sumar (add), cuyo código de operación es 011 , y que significa que el contenido de la localidad 01011 de memoria (actualmente 00000100) se suma al contenido del acumulador (00000000). Como la suma efectuada en el acumulador se realiza en binario, el resultado es 00000100, o sea, 4 en base 10. Este valor ha reemplazado el contenido previo del acumulador.</p>
+
+        <p>La quinta instrucción es al almacenar, provoca que el resultado de la suma acabada de hacer se copie en la localidad 01110, reemplazando la que allí había.</p>
+
+        <p>La sexta instrucción es una nueva carga, la que copia el valor contenido en la palabra 01100 en el acumulador. Este resultado es el valor almacenado por la segunda instrucción, que fue 00000011.</p>
+
+        <p>La séptima instrucción es restar (substract), cuyo código de operación es 100. Ahora el valor de la localidad 01101 (00000001) debe restarse del contenido del acumulador (00000011). Al igual que en el caso anterior (la suma que se realizó en la cuarta instrucción), esta resta se realiza en binario en el acumulador y se obtiene el resultado 00000010.</p>
+
+        <p>La octava instrucción es otro almacenar, lo que significa que el valor obtenido se almacena en la localidad 01100. En este momento es conveniente detenerse a observar lo que ha ocurrido. El actual estado de la memoria y del acumulador se muestran en la figura 2-6. Nótese que se han producido algunos cambios en los contenidos originales de la memoria mostrados en la figura Contenidos de la memoria para un programa de ejemplo y los datos asociados. Las palabras afectadas son la 01100 y la 01110. De hecho, cuando la computación continúe deberá observarse cuidadosamente cada una de ellas. Volviendo a la instrucción novena, que es 11000010, la tabla de Conjunto de Instrucciones indica que es una ramificación condicional si no 0 (branch if not 0), cuyo código de operación es 110 . Se trata de un tipo diferente de instrucción respecto de las que ya se han ejecutado, porque debe efectuarse dos cosas: primero examinar el contenido del acumulador; si el valor contenido en este es diferente de cero, lo cual es el caso (es 000010) entonces debe saltar (o desviarse) inmediatamente a la instrucción cuya dirección aparece como operando (o sea, 00010). Esta será la siguiente instrucción en ser ejecutada. Pero si el contenido del acumulador hubiera sido cero, entonces, en lugar de saltar a la instrucción 00010, debería haberse procedido directamente con la siguiente instrucción inmediata, es decir, la que se encuentra en la localidad 01001.</p>
+
+        <p>Como ahora se ha regresado a la que originalmente era la instrucción número tres, es obvio que deben ejecutarse nuevamente desde la tercera a la octava. El resultado de esta serie se dejará como un ejercicio, pero recuérdese que se comienza desde una situación diferente al inicio, que se muestra en la figura Contenidos de la memoria después de ejecutar ocho instrucciones. Una vez que se hayan realizado las operaciones correspondientes, se deberá llegar a la situación que se muestra en la figura Contenidos de la memoria después del segundo paso del lazo lógico, donde el contenido de la palabra 01100 es 00000001 , el de la palabra 01110 es 00001000 (o sea, 8 en base 10) y el contenido del acumulador es 00000001.</p>
+
+
+        Contenidos de la memoria después de ejecutar ocho instrucciones
+
+        Contenidos de la memoria después del segundo paso del lazo lógico
+
+        <p>En este momento la ramificación condicional se encuentra por segunda vez y, como antes, el contenido del acumulador es diferente de cero, por lo que el salto se produce de nuevo. El resultado es que las instrucciones de las tres a la ocho deben ejecutarse otra vez, lo que se deja como ejercicio. Una vez realizadas estas operaciones, el contenido de la memoria y del acumulador se muestran en la figura Contenidos de la memoria al terminar el programa. En particular, los contenidos de la palabra 01100 es 00000000, el de la palabra 0111 o es 00001100 (o sea, 12 en base 10) Y el contenido del acumulador es 00000000.</p>
+
+
+        Contenidos de la memoria al terminar el programa
+
+        <p>Ahora, la instrucción del salto condicional no produce resultados, porque el contenido del acumulador es cero. En consecuencia, la siguiente instrucción por ejecutar es la contenida en la localidad 01001, que es además la siguiente de la secuencia. Esta un alto (halt), cuyo código de operación es 111, por lo que la ejecución del programa finaliza. De la figura Contenidos de la memoria al terminar el programa se obtienen los valores finales, en particular el de la localidad 01110, que es 12 en base 10. Obsérvese qué es lo que ha ocurrido, poniendo especial atención en los valores iniciales dados en la figura Contenidos de la memoria para un programa de ejemplo y los datos asociados, y dedúzcase el objetivo de este programa en particular. (Indicación: observe
+        especialmente las palabras 01010 y 01011).</p>
+
+        <p>El análisis anterior describe la forma en que opera una computadora típica y aunque el lenguaje de máquina particular utilizado en el ejemplo se diseñó únicamente con el propósito de ejemplificar, los lenguajes de máquina reales tienen propiedades similares. La función de un programa consiste en proporcionar las instrucciones particulares bajo cuyo control la CPU debe operar para que realice algunos cálculos que se necesitan. La tarea del programador es producir la secuencia adecuada de instrucciones para resolver el problema.</p>
+
+        <h2>Uso de la Computadora</h2>
+        <p>Producir un programa en un lenguaje de máquina mismo, tal como se hizo en el ejemplo anterior , es claramente una tarea difícil. Por fortuna, existen herramientas de software en la mayor parte de los sistemas de cómputo que hacen esta tarea bastante más fácil. Se dispone de programas denominados compiladores para traducir los programas del usuario (que se escriben en una forma más apropiada para la comprensión humana) el lenguaje máquina necesario para que sean ejecutados. Los compiladores para la mayor parte de los lenguajes de programación los proporciona normalmente el propio fabricante de la computadora, aunque pueden provenir de otras fuentes.</p>
+
+        <p>La figura Uso de la Computadora muestra los pasos que se necesitan en la mayor parte de los sistemas de cómputo para ejecutar un programa. La secuencia comienza con el programador que escribe su programa, tal vez utilizando formas especiales de codificación. Para que el programa sea procesado por la computadora, debe entregársele en una forma en que esta pueda leerlo; muy comúnmente esto requiere la preparación de tarjetas perforadas por medio de una perforadora. Este paquete de tarjetas se introduce a la computadora por medio de un lector de tarjetas, como se muestra en la figura. También, el programa puede teclearse en alguna de las terminales de teletipo previamente descritas, lo que elimina la necesidad de usar tarjetas perforadas. Una vez que el programa ha sido procesado sus resultados aparecen en la salida, que puede ser un impresor, como se muestra o una terminal.</p>
+
+
+        <h2>Uso de la computadora</h2>
+        <p>Ahora se procederá a trazar la historia de un programa cuando se procesa con la secuencia mencionada. A lo largo del proceso se introducirán algunos importantes términos del vocabulario que se utiliza. EI programa, en la forma en que lo prepara el programador, se denomina programa fuente, y es normalmente escrito en uno de los lenguajes de programación mencionados previamente, como PL/I, FORTRAN, ALGOL o COBOL. Antes de que la secuencia de instrucciones pueda ser procesada por la computadora y ésta entregue los resultados, este programa fuente debe traducirse al lenguaje de máquina de la computadora específica, por medio de un compilador del lenguaje de programación que se está usando. Durante este proceso de traducción, el compilador comprueba que las reglas del lenguaje utilizado no hayan si violadas por el programador en su programa fuente, en cuyo caso emitirá algunos mensajes de error o diagnósticos, si es necesario. El resultado de la compilación se conoce como programa objeto, el cual se encuentra ahora listo para ser ejecutado. Las etapas de ejecución de un programa son las siguientes:</p>
+        <ul>
+            <li>Programa Fuente</li>
+            <li>Ejecución del programa compilador por la Computadora.</li>
+            <li>Programa Objeto.</li>
+            <li>Ejecución del programa objeto del programador por parte de la Computadora.</li>
+            <li>Salida del Programa.</li>
+        </ul>
+
+        <p>El tiempo total que se requiere para procesar un programa puede dividirse en dos fases separadas y distintas. El tiempo de compilación se refiere a la traducción del programa fuente al programa objeto equivalente; tiempo de ejecución, es el correspondiente a la ejecución del programa objeto. Algunos errores se detectan en el momento de la ejecución por el sistema operativo. El tiempo de ejecución se refiere también al que se consume cuando el programador proporciona determinados datos al programa para su procesamiento.</p>
+
+        <h2>Resumen</h2>
+        <p>El material que se ha presentado en esta sección ha sido escogido para proporcionar al lector una mejor perspectiva de las computadoras y de la computación. Se ha tratado de dar una idea general acerca de cómo está organizada una computadora y de cómo opera, así como también la forma en que se utiliza un sistema de cómputo moderno. Por supuesto, estos temas se han tratado muy superficialmente; el análisis puede extenderse mucho más, pero esto escaparía al propósito principal del libro.</p>
+
+        <p>El objetivo fundamental de este texto es enseñar a resolver problemas utilizando una computadora. Un programador de computación es, primero antes que nada, un resolvedor de problemas, por lo que para llegar a ser un programador eficiente es necesario aprender a manejar problemas en una forma rigurosa y sistemática.</p>
+
+    </main>
+</div>
+<script src="../../scripts/menu_paginas.js"></script>
+<script src="../../scripts/indice.js"></script>
+<script src="../../scripts/codigos.js"></script>
+<script src="../../libs/highlightjs/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

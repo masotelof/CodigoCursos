@@ -1,8 +1,64 @@
 {
   "categorias": [
     {
-      "nombre": "Programación en C",
-      "imagen": "imgs/c.png",
+      "nombre": "Algoritmos",
+      "imagen": "imgs/c-programming.png",
+      "paginaPrincipal": "pages/algoritmos/index.html",
+      "subcategorias": [
+        {
+          "nombre": "",
+          "paginas": [
+            { "titulo": "Error de Punto Flotante", "ruta": "pages/algoritmos/float_error.html" },
+            { "titulo": "Introducción a los Lenguajes de Programación", "ruta": "pages/algoritmos/lenguajes.html"},
+            { "titulo": "La computadora y la solución de Problemas", "ruta": "pages/algoritmos/solucion_problemas.html"}
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "C/C++",
+      "imagen": "imgs/c-plus-plus.svg",
+      "paginaPrincipal": "pages/c/index.html",
+      "subcategorias": [
+        {
+          "nombre": "Estructuras de control",
+          "paginas": [
+            { "titulo": "Condicionales", "ruta": "pages/c/condicionales.html" },
+            { "titulo": "Bucles", "ruta": "pages/c/bucles.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Java",
+      "imagen": "imgs/python.png",
+      "paginaPrincipal": "pages/c/index.html",
+      "subcategorias": [
+        {
+          "nombre": "Estructuras de control",
+          "paginas": [
+            { "titulo": "Condicionales", "ruta": "pages/c/condicionales.html" },
+            { "titulo": "Bucles", "ruta": "pages/c/bucles.html" }
+          ]
+        }
+      ]
+    },{
+      "nombre": "Python",
+      "imagen": "imgs/python.png",
+      "paginaPrincipal": "pages/c/index.html",
+      "subcategorias": [
+        {
+          "nombre": "Estructuras de control",
+          "paginas": [
+            { "titulo": "Condicionales", "ruta": "pages/c/condicionales.html" },
+            { "titulo": "Bucles", "ruta": "pages/c/bucles.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Linux",
+      "imagen": "imgs/python.png",
       "paginaPrincipal": "pages/c/index.html",
       "subcategorias": [
         {

@@ -1,13 +1,136 @@
-body { background: #121212; color: #f0f0f0; font-family: sans-serif; margin: 0; }
-.container { display: flex; min-height: 100vh; }
-aside#menu { width: 250px; background: #1e1e1e; padding: 1rem; border-right: 1px solid #333; }
-aside .categoria { margin-bottom: 1rem; }
-aside .categoria a { color: #fff; text-decoration: none; }
-main { flex: 1; padding: 2rem; }
+body {
+    background: #121212;
+    color: #f0f0f0;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+aside#menu {
+    width: 200px;
+    background: #1e1e1e;
+    padding: 1rem;
+    border-right: 1px solid #333;
+}
+
+aside .categoria {
+    margin-bottom: 1rem;
+}
+
+aside .categoria a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
 aside#menu img.icono {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  vertical-align: middle;
-  margin-right: 0.5rem;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+
+#indice-temas {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 8px;
+}
+
+#indice-temas h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+}
+
+#indice-temas ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#indice-temas li {
+    margin-bottom: 0.3em;
+}
+
+#indice-temas a {
+    text-decoration: none;
+    color: #9cdcfe;
+}
+
+#indice-temas a:hover {
+    text-decoration: underline;
+}
+
+
+hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 1.5em 0;
+}
+
+#contenido p {
+    text-align: justify;
+}
+
+.bloque-codigo {
+    margin: 1.5em 0;
+    border: 1px solid #555;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.codigo-encabezado {
+    background-color: #333;
+    color: #fff;
+    font-family: monospace;
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+.btn-toggle-codigo {
+    background: #444;
+    color: #fff;
+    border: none;
+    font-size: 0.8em;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-toggle-codigo:hover {
+    background: #666;
+}
+
+.imagen-con-etiqueta {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.imagen-con-etiqueta img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.imagen-con-etiqueta figcaption {
+    color: #ccc;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    font-style: italic;
 }

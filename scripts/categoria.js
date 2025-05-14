@@ -1,6 +1,6 @@
 async function cargarSubcategorias() {
   try {
-    const res = await fetch('/config.json');
+    const res = await fetch('../../config.json');
     const data = await res.json();
     const categoria = data.categorias.find(cat => cat.nombre === categoriaActual);
 
@@ -16,17 +16,18 @@ async function cargarSubcategorias() {
       sub.paginas.forEach(pagina => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.href = "/" + pagina.ruta;
-        a.textContent = `${sub.nombre} - ${pagina.titulo}`;
+        a.href = "../../" + pagina.ruta;
+        a.textContent = `${pagina.titulo}`; //${sub.nombre} -
         li.appendChild(a);
         lista.appendChild(li);
       });
     });
 
-    const titulo = document.createElement("h2");
+    /*const titulo = document.createElement("h3");
     titulo.textContent = "Subcategorías";
 
-    main.appendChild(titulo);
+    main.appendChild(titulo);*/
+
     main.appendChild(lista);
   } catch (e) {
     console.error("Error cargando subcategorías:", e);

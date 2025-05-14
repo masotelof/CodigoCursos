@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Introducción a los Lenguajes de Programación</title>
+    <link rel="stylesheet" href="../../styles/dark.css">
+    <link rel="stylesheet" href="../../libs/highlightjs/styles/github-dark.min.css">
+</head>
+<body>
+<div class="container">
+    <aside id="menu"></aside>
+    <main id="contenido">
+
+        <h1>Introducción a los Lenguajes de Programación</h1>
+
+        <h2>Introducción</h2>
+        <p>Los Programas de Computadora son una secuencia de instrucciones que permiten a las computadoras procesar
+            datos. Dichos programas le especifican a la computadora las acciones que debe de realizar; estos son
+            realizados por los Programadores en un determinado Lenguaje de Programación y se le conoce como el Software
+            de la computadora.</p>
+        <p>La velocidad con la que se ejecuta un Programa depende de el número de operaciones de punto flotante que
+            puede ejecutar el microprocesador de una computadora (llamados también FLOPS por sus siglas en ingles de
+            Floating Point Operations Per Seconds). La velocidad de ejecución de un programa sigue la Ley de Moore, la
+            cual menciona que cada uno o dos años la velocidad y memoria de un computadora se duplica.</p>
+
+        <h2>Tipos de Lenguajes de Programación</h2>
+        <p>Los Lenguajes de Programación se clasifican en tres tipos, esto dependiendo de los pasos necesarios para que
+            puedan ser interpretados por la Computadora.</p>
+
+        <h3>Lenguaje Máquina</h3>
+        <p>Es aquel que puede ser interpretado por el microprocesador de una computadora, este esta definido por la
+            arquitectura del microprocesador y el conjunto de instrucciones soportadas por el mismo. Este lenguaje esta
+            conformado por una serie de 0 y 1.</p>
+
+        <pre><code class="language-asm" data-title="'Hello World!' en Lenguaje Binario">
+  _10111000 _00100001 _00001010 _00000000 _00000000
+  _10100011 _00001100 _00010000 _00000000 _00000110
+  _10111000 _01101111 _01110010 _01101100 _01100100
+  _10100011 _00001000 _00010000 _00000000 _00000110
+  _10111000 _01101111 _00101100 _00100000 _01010111
+  _10100011 _00000100 _00010000 _00000000 _00000110
+  _10111000 _01001000 _01100101 _01101100 _01101100
+  _10100011 _00000000 _00010000 _00000000 _00000110
+  _10111001 _00000000 _00010000 _00000000 _00000110
+  _10111010 _00010000 _00000000 _00000000 _00000000
+  _10111011 _00000001 _00000000 _00000000 _00000000
+  _10111000 _00000100 _00000000 _00000000 _00000000
+  _11001101 _10000000
+
+  _10111000 _00000001 _00000000 _00000000 _00000000
+  _11001101 _10000000
+</code></pre>
+
+        <pre><code class="language-asm" data-title="'Hello World!' en Lenguaje Máquina">
+        b8    21 0a 00 00   #moving "!\n" into eax
+        a3    0c 10 00 06   #moving eax into first memory location
+        b8    6f 72 6c 64   #moving "orld" into eax
+        a3    08 10 00 06   #moving eax into next memory location
+        b8    6f 2c 20 57   #moving "o, W" into eax
+        a3    04 10 00 06   #moving eax into next memory location
+        b8    48 65 6c 6c   #moving "Hell" into eax
+        a3    00 10 00 06   #moving eax into next memory location
+        b9    00 10 00 06   #moving pointer to start of memory location into ecx
+        ba    10 00 00 00   #moving string size into edx
+        bb    01 00 00 00   #moving "stdout" number to ebx
+        b8    04 00 00 00   #moving "print out" syscall number to eax
+        cd    80            #calling the linux kernel to execute our print to stdout
+        b8    01 00 00 00   #moving "sys_exit" call number to eax
+        cd    80            #executing it via linux sys_call
+</code></pre>
+
+        <h3>Lenguaje Ensamblador</h3>
+        <p>Es un conjunto de abreviaturas en ingles que sirven para representar operaciones básicas. Este lenguaje surge
+            de la complejidad de escribir programas en Lenguaje Maquina. Junto con el Lenguaje Ensamblador fue necesario
+            desarrollar un programa Ensamblador el cual es el encargado de convertir el código escrito en Lenguaje
+            Ensamblador a Lenguaje Máquina.</p>
+
+        <pre><code class="language-asm" data-title="'Hello World!' en Lenguaje">
+section     .text
+global      _start                  ;must be declared for linker (ld)
+
+_start:                             ;tell linker entry point
+
+mov     edx,len                   ;message length
+mov     ecx,msg                   ;message to write
+mov     ebx,1                     ;file descriptor (stdout)
+mov     eax,4                     ;system call number (sys_write)
+int     0x80                      ;call kernel
+
+mov     eax,1                     ;system call number (sys_exit)
+int     0x80                      ;call kernel
+
+section     .data
+
+msg     db  'Hello, world!',0xa     ;our dear string
+len     equ $ - msg                 ;length of our dear string
+        </code></pre>
+
+        <h3>Lenguaje de Alto Nivel</h3>
+        <p>Es el que permite escribir instrucciones que parecen oraciones en Idioma Ingles, también permite introducir
+            una serie de expresiones matemáticas. Para convertir del Lenguaje de Alto Nivel a Lenguaje Maquina es
+            necesario el uso de un programa llamado Compilador; esto puede llevar un tiempo considerable. Además existen
+            programas denominados Interpretes los cuales permiten ejecutar un programa escrito en Lenguaje Máquina de
+            manera directa sin necesidad de compilarlo; a este tipo de lenguajes se les llama Lenguaje de Script y por
+            lo mismo son más lentos que los compilados, algunos de estos lenguajes son: Javascript, PHP, Python, Perl,
+            etc.</p>
+
+        <pre><code class="language-c" data-title="'Hello World!' en Lenguaje C">
+#include < stdio.h >
+
+int main(){
+    printf("Hello world!");
+    return 0;
+}
+            </code></pre>
+
+        <pre><code class="language-java" data-title="'Hello World!' en Lenguaje Java">
+class HelloWorld {
+    public static void main(String args[]) {
+        System.out.println("Hello world!");
+    }
+}
+            </code></pre>
+
+        <pre><code class="language-python" data-title="'Hello World!' en Lenguaje Python">
+print("Hello world!")
+        </code></pre>
+
+    </main>
+</div>
+<script src="../../scripts/menu_paginas.js"></script>
+<script src="../../scripts/indice.js"></script>
+<script src="../../scripts/codigos.js"></script>
+<script src="../../libs/highlightjs/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>
